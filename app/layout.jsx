@@ -9,7 +9,7 @@ export const metadata = {
 
 const MainLayout = ({ children }) => {
 	return (
-		<html lang='np'>
+		<html lang='en'>
 			<body>
 				<div>{children}</div>
 			</body>
