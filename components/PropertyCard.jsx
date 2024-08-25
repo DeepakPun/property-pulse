@@ -4,13 +4,14 @@ import React from 'react'
 import { FaBath, FaBed, FaRulerCombined } from 'react-icons/fa'
 
 const PropertyCard = ({ property }) => {
-	// console.log(property)
+	console.log(property)
 	// console.log('Image is => ', property.images.at(0))
 	return (
 		<div className='rounded-xl shadow-md relative'>
 			<Image
 				// src={`/images/properties/${images[0]}`}
-				src={`/images/properties/${property.images[0]}`}
+				// src={`/images/properties/${property.images[0]}`}
+				src={property.images[0]}
 				alt=''
 				width={0}
 				height={0}
@@ -24,15 +25,18 @@ const PropertyCard = ({ property }) => {
 				</div>
 				<h3 className='absolute top-[10px] right-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right'>
 					$4,200/mo
+					{/* {property.rates.nightly && `${property.rates.nightly}/night`}{' '}
+					{property.rates.weekly && `${property.rates.weekly}/week`}{' '}
+					{property.rates.monthly && `${property.rates.monthly}/month`}{' '} */}
 				</h3>
 
 				<div className='flex justify-center gap-4 text-gray-500 mb-4'>
 					<p>
-						<FaBed className='inline mr-2' /> {property.beds}
+						<FaBed className='inline mr-2' /> {property.beds}{' '}
 						<span className='md:hidden lg:inline'>Beds</span>
 					</p>
 					<p>
-						<FaBath className='inline mr-2' /> {property.baths}
+						<FaBath className='inline mr-2' /> {property.baths}{' '}
 						<span className='md:hidden lg:inline'>Baths</span>
 					</p>
 					<p>
